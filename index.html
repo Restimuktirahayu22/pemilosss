@@ -1,1 +1,60 @@
-
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting Ketua OSIS SMKN 1 Ampelgading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pemilihan Ketua OSIS SMKN 1 Ampelgading</h1>
+        <p>Pilih kandidat ketua OSIS favoritmu!</p>
+    </header>
+    <main>
+        <form class="vote-form">
+            <div class="candidates">
+                <div class="candidate-card">
+                    <img src="https://i.imgur.com/pink-avatar1.png" alt="Kandidat 1">
+                    <h2>Kandidat 1: Amanda Putri</h2>
+                    <p>Visi: Mewujudkan OSIS yang aktif, kreatif, dan peduli lingkungan sekolah.</p>
+                    <input type="radio" name="vote" id="amanda" value="Amanda Putri">
+                    <label for="amanda">Pilih Amanda Putri</label>
+                </div>
+                <div class="candidate-card">
+                    <img src="https://i.imgur.com/pink-avatar2.png" alt="Kandidat 2">
+                    <h2>Kandidat 2: Budi Santoso</h2>
+                    <p>Visi: Membawa OSIS menjadi wadah inspirasi dan inovasi bagi siswa.</p>
+                    <input type="radio" name="vote" id="budi" value="Budi Santoso">
+                    <label for="budi">Pilih Budi Santoso</label>
+                </div>
+                <div class="candidate-card">
+                    <img src="https://i.imgur.com/pink-avatar3.png" alt="Kandidat 3">
+                    <h2>Kandidat 3: Citra Dewi</h2>
+                    <p>Visi: Membentuk OSIS yang transparan, amanah, dan bertanggung jawab.</p>
+                    <input type="radio" name="vote" id="citra" value="Citra Dewi">
+                    <label for="citra">Pilih Citra Dewi</label>
+                </div>
+            </div>
+            <button type="submit">Kirim Suara</button>
+        </form>
+        <div id="thankyou" class="hidden">
+            <h2>Terima kasih sudah memilih!</h2>
+            <p>Suara Anda sangat berarti untuk kemajuan OSIS SMKN 1 Ampelgading.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 SMKN 1 Ampelgading &mdash; E-Voting Ketua OSIS</p>
+    </footer>
+    <script>
+        // Sederhana: Tampilkan ucapan terima kasih setelah vote
+        const form = document.querySelector('.vote-form');
+        const thankYou = document.getElementById('thankyou');
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            form.classList.add('hidden');
+            thankYou.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
